@@ -10,7 +10,7 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark"
 
 # Site Settings
@@ -118,9 +118,6 @@ author:
   location         : "Łódź, Poland"
   email            : "byt3w0lf@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:byt3w0lf@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://byt3w0lf.github.io"
