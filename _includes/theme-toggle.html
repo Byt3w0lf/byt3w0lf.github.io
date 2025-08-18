@@ -1,11 +1,9 @@
-<div class="theme-toggle">
-  <label class="switch">
-    <i class="fa-solid fa-moon"></i>
-    <input type="checkbox" onchange="toggleTheme()" id="theme-toggle">
-    <span class="slider round"></span>
-    <i class="fa-solid fa-sun"></i>
-  </label>
-</div>
+<label class="switch">
+  <i class="fa-solid fa-moon"></i>
+  <input type="checkbox" onchange="toggleTheme()" id="theme-toggle">
+  <span class="slider round"></span>
+  <i class="fa-solid fa-sun"></i>
+</label>
 
 <script>
   function changeGiscusTheme(theme) {
@@ -72,24 +70,15 @@
 </script>
 
 <style>
-.theme-toggle {
+.switch {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* spacing between moon, switch, sun */
   font-size: 16px;
 }
 
-.theme-toggle i {
-  color: #aaa;   /* default muted */
-  font-size: 18px;
-}
-
-/* Switch container */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
+.switch i {
+  color: #888; /* default muted */
 }
 
 /* Hide checkbox */
@@ -97,20 +86,22 @@
   opacity: 0;
   width: 0;
   height: 0;
-  position: absolute;
+  position: absolute; /* keep it clickable */
 }
 
 /* Slider track */
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
+  position: relative;
+  width: 40px;
+  height: 20px;
   background-color: #ccc;
   border-radius: 20px;
+  cursor: pointer;
   transition: 0.4s;
+  flex-shrink: 0; /* don't let it shrink */
 }
 
-/* Slider knob */
+/* Knob */
 .slider:before {
   content: "";
   position: absolute;
@@ -123,31 +114,28 @@
   transition: 0.4s;
 }
 
-/* Checked state for switch */
-.switch input:checked + .slider {
+/* Checked state */
+input:checked + .slider {
   background-color: #2196F3;
 }
 
-.switch input:checked + .slider:before {
+input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-/* ===== Icon highlighting ===== */
-
-/* Default: moon highlighted, sun muted */
-.theme-toggle .fa-moon {
-  color: #2196F3; /* blue */
-}
-.theme-toggle .fa-sun {
-  color: #aaa;    /* gray */
+.switch .fa-moon {
+  color: #2196F3;
 }
 
-/* When checked: sun highlighted, moon muted */
-.switch input:checked .fa-sun {
-  color: #FFD700; /* yellow */
-}
-.switch input:checked ~ .fa-moon {
-  color: #aaa;    /* gray */
+.switch .fa-sun {
+  color: #aaa;
 }
 
+.switch .fa-moon:has(+ input:checked) {
+  color: #aaa !important;
+}
+
+.switch input:checked ~ .fa-sun {
+  color: #FFD700;
+}
 </style>
