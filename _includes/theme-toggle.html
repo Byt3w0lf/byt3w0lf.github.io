@@ -1,0 +1,27 @@
+<button id="theme-toggle" aria-label="Toggle dark/light mode">
+  🌓
+</button>
+
+<script>
+  // Apply saved theme if exists
+  if (localStorage.getItem("theme")) {
+    document.documentElement.setAttribute("data-skin", localStorage.getItem("theme"));
+  }
+
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    let current = document.documentElement.getAttribute("data-skin");
+    let next = current === "dark" ? "default" : "dark";
+    document.documentElement.setAttribute("data-skin", next);
+    localStorage.setItem("theme", next);
+  });
+</script>
+
+<style>
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+</style>
