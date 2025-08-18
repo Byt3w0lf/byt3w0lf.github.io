@@ -33,11 +33,7 @@
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
-        <ul class="nav">
-          {% for item in site.data.navigation.main %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-          {% endfor %}
-        </ul>
+        {% include theme-toggle.html %}
       </nav>
     </div>
   </div>
