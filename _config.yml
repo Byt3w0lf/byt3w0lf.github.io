@@ -24,7 +24,7 @@ name                     : "Byt3w0lf"
 description              : "Documenting my career shift journey"
 url                      : "https://byt3w0lf.github.io"
 baseurl                  : ""
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "Byt3w0lf/byt3w0lf.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : ""
@@ -57,8 +57,8 @@ comments:
     strict               : 0 # 1 for enabled, 0 for disabled (default)
     input_position       : "top" # "top", "bottom" # The comment input box will be placed above or below the comments
     emit_metadata        : 0 # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
-    lang                 : "pl" # "en" (default)
-    lazy                 : true # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
+    lang                 : "en" # "en" (default)
+    lazy                 : false # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
