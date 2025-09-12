@@ -230,6 +230,43 @@
   }
 }
 
+.archive__item--with-thumb {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.archive__item--with-thumb .archive__item-teaser {
+  flex: 0 0 120px; /* thumbnail width */
+}
+
+.archive__item--with-thumb .archive__item-teaser img {
+  width: 100%;
+  height: auto;   /* preserve aspect ratio */
+  border-radius: 6px; /* optional */
+  object-fit: contain; /* ensures image isn't cropped */
+}
+
+.archive__item--with-thumb .archive__item-content {
+  flex: 1;
+}
+
+.list__item .archive__item .archive__item-content .archive__item-title {
+  margin: 0 !important;   /* kill top/bottom margins */
+}
+
+.max-lines {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 4.2em;
+  line-height: 1.4em;
+}
+
+.list__item .archive__item--with-thumb {
+  padding-bottom: 1rem;
+}
+
 /*
    Features
    ========================================================================== */

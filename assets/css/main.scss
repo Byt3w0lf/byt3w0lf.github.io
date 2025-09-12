@@ -7,3 +7,21 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.initial-content {
+    padding: 1rem;
+}
+
+#main {
+  max-width: none;   /* remove width cap */
+  width: 100%;       /* take full horizontal space */
+  margin: 0;         /* remove auto-centering */
+  padding: 0 auto;   /* optional: keep a little horizontal padding */
+}
+
+.masthead .masthead__inner-wrap {
+  max-width: none;   /* remove width cap */
+  width: 100%;       /* take full horizontal space */
+  margin: 0;         /* remove auto-centering */
+  padding: 1rem auto;   /* optional: keep a little horizontal padding */
+}
